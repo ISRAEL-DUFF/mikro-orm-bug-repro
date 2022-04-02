@@ -2,7 +2,6 @@ import { Options } from "@mikro-orm/core";
 import { TsMorphMetadataProvider } from "@mikro-orm/reflection";
 import { SqlHighlighter } from "@mikro-orm/sql-highlighter";
 import { PostgreSqlDriver } from "@mikro-orm/postgresql";
-// import { PluralizedUnderscoreNamingStrategy } from "common";
 import { join } from "path";
 import { env } from "process";
 
@@ -39,16 +38,10 @@ const mikroormOptions: Options<PostgreSqlDriver> = {
     tableName: "_mikroorm_migrations",
   },
   name: "main",
-  // namingStrategy: PluralizedUnderscoreNamingStrategy,
   pool: {
     max: 5,
     min: 5,
   },
-  // seeder: {
-  //   defaultSeeder: "DatabaseSeeder",
-  //   path: "dist/infrastructure/data/seeders",
-  //   pathTs: "src/infrastructure/data/seeders",
-  // },
   strict: true,
   type: "postgresql",
   validate: true,
